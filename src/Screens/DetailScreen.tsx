@@ -2,18 +2,15 @@ import { View, Text, ActivityIndicator, Dimensions, ScrollView, Button, Pressabl
 import React, { useEffect, useState } from 'react'
 import { useRoute } from '@react-navigation/native'
 import { Entypo, AntDesign } from '@expo/vector-icons';
-import useFetch from '../Custom-Hook/useFetch'
 import RenderHTML from 'react-native-render-html'
 import { getById } from '../api/apiCall'
 import { useAppDispatch } from '../Store/hooks';
 import { addFavorite } from '../Store/FavoriteSlice';
-import { useAppSelector } from '../Store/hooks';
 
 const { width }: any = Dimensions.get('window');
-const URL = "https://www.themuse.com/api/public/jobs?page=1"
+
 const DetailScreen = () => {
 
-    const favorites = useAppSelector((state) => state.favorites.favorites)
     const dispatch = useAppDispatch();
 
     const [detail, setData] = useState(null);

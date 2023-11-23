@@ -1,11 +1,9 @@
 import { View, Text, TouchableOpacity } from 'react-native'
-import React, { useEffect } from 'react'
-import { useAppSelector, useAppDispatch } from '../Store/hooks'
+import React from 'react'
+import { useAppDispatch } from '../Store/hooks'
 import { FontAwesome } from '@expo/vector-icons';
 import { deleteFavorite } from '../Store/FavoriteSlice';
 import { Swipeable, GestureHandlerRootView } from 'react-native-gesture-handler';
-
-
 
 type Props = {
     item: any
