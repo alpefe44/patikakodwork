@@ -3,6 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import HomeScreen from './Screens/HomeScreen';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import DetailScreen from './Screens/DetailScreen';
+import Favorites from './Screens/Favorites';
 
 
 export type DrawerNavigationProps = {
@@ -26,7 +27,8 @@ function MyDrawer() {
     return (
         <Drawer.Navigator>
             <Drawer.Screen name='JobsScreen' component={HomeScreen} options={{headerTitleAlign:'center' , headerTitle : 'Jobs'}}></Drawer.Screen>
-        </Drawer.Navigator>
+            <Drawer.Screen name='FavoritedJobs' component={Favorites} options={{headerTitleAlign:'center' , headerTitle:'Favorites'}}></Drawer.Screen>
+        </Drawer.Navigator> 
     )
 }
 

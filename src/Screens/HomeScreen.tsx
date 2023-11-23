@@ -14,7 +14,7 @@ const HomeScreen = (props: Props) => {
     const { data, loading } = useFetch(URL)
 
     const listRenderItem = ({ item }: any) => {
-        if (item.categories[0].name !== "Unknown") {
+        if (item?.categories[0]?.name !== "Unknown") {
             return (
                 <ListJobs item={item}></ListJobs>
             )
