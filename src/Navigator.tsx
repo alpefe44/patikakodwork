@@ -17,7 +17,7 @@ export type RootNavigationProps = {
     DetailScreen: {
         id: string
     },
-    Drawer: DrawerNavigationProps
+    Drawer: undefined
 }
 
 const Drawer = createDrawerNavigator<DrawerNavigationProps>();
